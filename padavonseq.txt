@@ -1,0 +1,8 @@
+#padovan sequence june13
+n=int(input())
+pprev,prev,curr=1,1,1
+if n<=2:
+  print(1)
+for i in range(3,n+1):
+  pprev,prev,curr=prev,curr,(pprev+prev)%(10**9+7)
+print(curr)
